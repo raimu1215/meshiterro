@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def show
-    @user =　post_image_url
+    @user = User.find(params[:id])
     @post_images = @user.post_images
   end
 
   def edit
-    @user = PostImage.find(params[:id])
+    @user = User.find(params[:id])
   end
   
   def update
